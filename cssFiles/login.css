@@ -1,6 +1,6 @@
 /* background */
 .background-image {
-    background-image: url("background-image.png");
+    background-image: url("../background-image.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,7 +20,7 @@ body {
 }
 
 form {
-    background-color: #242424;
+    background-color: rgba(36, 36, 36, 0.5);
     margin: 0 auto;
     padding: 10px;
     border-radius: 10px;

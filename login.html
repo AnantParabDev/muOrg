@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link href="login.css" rel="stylesheet" type="text/css" />
+  <link href="cssFiles/login.css" rel="stylesheet" type="text/css" />
 
   <body class="background-image">
-    <form action="methods">
+    <form action="phpFiles/login.php" method="post" onsubmit="" target="_blank">
       <label>User name</label>
-      <input type="text" required /><br /><br />
+      <input type="text" name="userName" required/><br/><br />
       <label>Password</label>
-      <input type="password" required /><br /><br />
+      <input type="password" name="pass" required /><br /><br />
       <input type="reset" />
       <input type="submit" />
     </form>
