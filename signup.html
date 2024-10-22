@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link href="signup.css" rel="stylesheet" type="text/css">
+
+<body>
+
+     <img src="signup.png" width="400" height="400"></img>
+     <br><br>
+
+     <form action="methods">
+          <label>Email address</label>
+          <input type="email" required><br>
+          <label>Phone number</label>
+          <input type="text" required><br>
+          <label>User name </label>
+          <input type="text" required><br>
+          <label>Search for User names </label>
+          <input type="url"><br><br>
+          <label>Password</label>
+          <input type="password" required><br>
+          <label>Confirm <br>Password </label>
+          <input type="password" required><br>
+          <label>Age </label>
+          <input type="number" min="1" max="100" required><br>
+
+          <label>Gender</label>
+          <input type="radio" id="m" name="gender" value="male">Male
+          <input type="radio" id="f" name="gender" value="female">Female
+          <input type="radio" id="o" name="gender" value="others">Other<br><br><br>
+
+          <label>Profile Picture</label>
+          <input type="file" name="myImage" accept="image/png , image/jpeg"><br><br>
+
+          <label>Suggested profile pictures</label>
+          <input type="image" class="upload" src="male.jpg">
+          <input type="image" class="upload" src="fem.jpg"><br><br>
+
+          <input type="color"><br>
+
+          <label>Account created on</label>
+          <input type="datetime-local"><br>
+
+          <label>Date of Birth </label>
+          <input type="date" required><br>
+
+          <label>Sleepmode active time</label>
+          <input type="time"><br>
+
+          <input type="range"><br>
+
+          <label>Nationality</label>
+          <select size="1" required>
+               <option value="india">Indian</option><br>
+               <option value="other">Other<br></option><br>
+          </select><br>
+
+          <label>State</label>
+          <input type="search" required><br>
+
+          <label>Other music platform used</label>
+          <input type="checkbox" id="sp" name="platform" value="spotify">Spotify
+          <input type="checkbox" id="sa" name="platform" value="saavn">Saavn
+          <input type="checkbox" id="ga" name="platform" value="gaana">Gaana
+          <input type="checkbox" id="ap" name="platform" value="apple">Apple music
+
+          <input type="reset">
+          <a target="_blank"><input type="submit"></a>
+     </form>
+
+
+</body>
+
+</html>

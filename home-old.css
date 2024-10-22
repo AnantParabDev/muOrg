@@ -1,0 +1,101 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+}
+
+#main h1 {
+    margin-bottom: -5px;
+}
+.border {
+    border: 2px black solid;
+}
+ .border:hover {
+    border: 2px white solid;
+ }
+
+.header-button {
+    text-align: right;
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+#main {
+    height: 70px;
+    text-align: center;
+}
+
+div {
+    padding: 10px; 
+    margin: 10px;   
+}
+
+.dark-theme {
+    background-color: #242424;
+    border-radius: 2px;
+}
+
+h2 {
+    margin-bottom: -5px;
+}
+
+img {
+    width: 50%;
+    max-width: 300px;
+    height: 300px;
+    margin: 20px auto 0;
+    display: block;
+    object-fit: cover;
+}
+
+.caption-div {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+caption {
+    border-bottom: red;
+}
+
+ol,ul {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+dt {
+    font-size: 18px;
+}
+
+table {
+    font-size: large;
+    text-align: center;
+}
+
+th, td {
+    padding: 6px 5px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: start;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+footer a {
+    margin: 0 1rem;
+}
+hr {
+    border-style: solid;
+    border-color: rgb(190, 66, 184);
+}

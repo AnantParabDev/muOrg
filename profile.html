@@ -1,0 +1,62 @@
+<!--Add page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device-width,initial-scale=0.1">
+        <link href="profile.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <img src="signup.png" width="400" height="400"></img>
+        <br><br>
+
+        <form action="methods">          
+            <label>Change Age </label>
+            <input type="number" min="1" max="100" required><br>
+
+            <label>Change Gender</label>
+            <input type="radio" id="m" name="gender" value="male">Male
+            <input type="radio" id="f" name="gender" value="female">Female
+            <input type="radio" id="o" name="gender" value="others">Other<br><br><br>
+
+            <label>Profile Picture</label>
+            <input type="file" name="myImage" accept="image/png , image/jpeg"><br><br>
+
+            <label>Suggested profile pictures</label>
+            <input type="image" class="upload" src="male.jpg">
+            <input type="image" class="upload" src="fem.jpg"><br><br>
+
+            <label>Any hobbies?</label>
+            <input type="text">
+
+            <label>Favourite Color</label>
+            <input type="color"><br>
+
+            <label>Change Date of Birth</label>
+            <input type="date" required><br>
+
+            <label>Preferred Volume</label>
+            <input type="range"><br>
+
+            <label>Nationality</label>
+            <select size="1" required>
+                <option value="india">Indian</option><br>
+                <option value="America">America</option><br>
+                <option value="Germany">Germany</option><br>
+                <option value="Egypt">Egypt</option><br>
+                <option value="other">Other<br></option><br>
+            </select><br>
+
+            <label>State</label>
+            <input type="search" required><br>
+
+            <input type="reset">
+            <a target="_blank"><input type="submit"></a>
+        </form>
+
+
+    </body>
+
+</html>
