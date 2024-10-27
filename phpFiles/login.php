@@ -14,7 +14,7 @@
             $inputPass = $_POST['pass'];
             
             //check data
-            $selectRecord = "SELECT pass FROM user WHERE userName='$name'";
+            $selectRecord = "SELECT pass FROM user1 WHERE userName='$name'";
             $checkRecord = mysqli_query($conn, $selectRecord); //result set
             $row = mysqli_fetch_assoc($checkRecord);
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Songs</title>
+</head>
+<body>
+    <style>
+        *{
+           margin:0;
+           padding: 0;
+           box-sizing: border-box; 
+        }
+        body {
+        width: 100vw;
+        height: 100vh;
+        font-family: sans-serif;
+        background-color: black;
+        color: #fff;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h2 {
+        text-align:center;
+        margin-top: 2rem;
+      }
+      form{
+        background-color: #242424;
+        color: plum;
+        border:2px solid greenyellow;
+        width: 40%;
+        height: 50%;
+        text-align: center;
+        padding: 20px;
+      }
+      textarea{
+        height: 5em;
+      }
+    </style>
+    <h2>Insert Artist:</h2><br>
+    <form action="setArtist.php" method="post" onsubmit="" target="_self">
+        Artist: <input type="text" name="artistName" id=""><br><br>
+        Genre:  <input type="text" name="genre" id=""><br><br>
+        Bio:    <textarea name="bio" id=""></textarea><br><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <h2>Insert Song:</h2><br>
+    <form action="setSongs.php" method="post" onsubmit="" target="_self">
+        Title: <input type="text" name="title" id=""><br><br>
+        Artist:  <input type="text" name="artist" id=""><br><br>
+        Genre:  <input type="text" name="genre" id=""><br><br>
+        duration:  <input type="text" name="duration" id=""><br><br>
+        file:  <input type="file" name="filePath" id=""><br><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+    
+</body>
+</html>
+<!--
+inputs
+title
+artist name
+genre
+path
+
+artist name
+bio
+genre
+
+table info
+sid
+title
+duration
+file path
+aid fk
+
+aid
+name
+genre
+bio
+-->

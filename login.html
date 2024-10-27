@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link href="cssFiles/login.css" rel="stylesheet" type="text/css" />
+  <link href="login.css" rel="stylesheet" type="text/css" />
+  <head>
+       <script>
+           function loginValidate() { 
+            // Username validation
+            var dp = document.getElementById("user").value;
+            var usPat = /^[a-zA-Z\-]+$/;
+            if (usPat.test(dp) == false) {
+                alert("Invalid Username");
+                return false;
+            }
+            
+            
 
+           return true;
+     }
+
+
+
+       </script>
+  </head>
   <body class="background-image">
-    <form action="phpFiles/login.php" method="post" onsubmit="" target="_blank">
+    <form action="phpFiles/login.php" method="post" onsubmit="return loginValidate()">
+      <h2 align="center">Log In </h2>
+      <br>
       <label>User name</label>
-      <input type="text" name="userName" required/><br/><br />
+      <input type="text" id="user" name="userName" placeholder="Enter your Name" required /><br /><br />
       <label>Password</label>
-      <input type="password" name="pass" required /><br /><br />
+      <input type="password" id="pwrd" name="pass" placeholder="Enter your Password" required /><br /><br />
       <input type="reset" />
       <input type="submit" />
+      
+      <br><br>
+      Dont Have an account ?<a href="signup.html"> Sign up here</a>
     </form>
   </body>
 </html>

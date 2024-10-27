@@ -21,20 +21,20 @@
     mysqli_select_db($conn, 'music_organizer');
 
     //create table
-    $q2 = "CREATE TABLE IF NOT EXISTS user(
-        userId INTEGER NOT NULL AUTO_INCREMENT,
-        userName VARCHAR(20) NOT NULL,
-        dob DATE NOT NULL,
-        email VARCHAR(30) NOT NULL,
-        pass VARCHAR(255) NOT NULL,
-        phone VARCHAR(15) NOT NULL,
-        gender VARCHAR(10) DEFAULT 'other',
-        nation VARCHAR(20) DEFAULT 'other',
-        PRIMARY KEY(userId),
-        UNIQUE KEY(userName),
-        UNIQUE KEY(email),
-        CONSTRAINT chk_phone_length CHECK (LENGTH(phone) > 9)
-    )";
+    $q2 = "CREATE TABLE IF NOT EXISTS user1 (
+    userId INT(100) NOT NULL AUTO_INCREMENT,
+    userName VARCHAR(20) NOT NULL,
+    dob DATE NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    pass VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    gender VARCHAR(10) DEFAULT 'other',
+    nation VARCHAR(20) DEFAULT 'other',
+    PRIMARY KEY(userId),  
+    UNIQUE KEY(userName),
+    UNIQUE KEY(email)
+);
+";
 
     if(mysqli_query($conn, $q2))
         echo "<br>Table 'user' created successfully";

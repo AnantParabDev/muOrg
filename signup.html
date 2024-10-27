@@ -2,40 +2,116 @@
 <html lang="en">
 
 <link href="signup.css" rel="stylesheet" type="text/css">
+<head>
+    <script>
+         function Validate() {
+            // Email validation
+            var email = document.getElementById("em").value;
+            var re_em = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]+)(\.[a-z]+)?$/;
+            if (!re_em.test(email)) {
+                   alert("Enter a valid email id");
+                   return false ;
+            }
+                
+            // Phone number validation
+            var pn = document.getElementById("phone").value;
+            var pnPat = /^[789]{1}[0-9]{9}$/;
+            if (pnPat.test(pn) == false) {
+                alert("Invalid Phone Number");
+                return false;
+            }
 
+            // Username validation
+            var dp = document.getElementById("user").value;
+            var usPat = /^[a-zA-Z\-]+$/;
+            if (usPat.test(dp) == false) {
+                alert("Invalid Username");
+                return false;
+            }
+
+            // Password validation
+            var password = document.getElementById("pwrd").value;
+            if (password.trim().length < 6 && password.trim().length > 10) {
+                alert("Password must be 6 to 9 characters long");
+                return false;
+            } else if (password.search(/[A-Z]/) == -1) {
+                alert("Password must contain at least one uppercase letter");
+                return false;
+            } else if (password.search(/[a-z]/) == -1) {
+                alert("Password must contain at least one lowercase letter");
+                return false;
+            } else if (password.search(/[0-9]/) == -1) {
+                alert("Password must contain at least one digit");
+                return false;
+            } else if (password.search(/[\@\.\$]/) == -1) {
+                alert("Password must contain at least one special character (@ . $)");
+                return false;
+            }
+
+            // Confirm password validation
+            var confirmPassword = document.getElementById("cfpwrd").value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+             
+            // Gender validation
+            var x = document.getElementsByName("gender");
+            if((x[0].checked == false) && (x[1].checked == false) && (x[2].checked == false)) {
+                alert("Please select Gender");
+                return false ;
+            }
+                        
+            // Nationality validation
+            var x = document.getElementById("nat");
+            var natPat = x.options[x.selectedIndex].value;
+            if (natPat == "") {
+                alert("Please select Nationality");
+                return false;
+            }
+
+            return true;
+}
+
+    </script> 
+</head>
 <body>
 
-     <img src="signup.png" width="400" height="400">
+     <img src="signup.png" width="400" height="400"></img>
      <br><br>
-
-     <form action="phpFiles/signup.php" method="post" onsubmit="" target="_blank">
+   
+     <form action="phpFiles/signup.php" method="post" onsubmit="return Validate()" target="_blank">
+          <h1 align="center">Sign up <br> to start listening</h1>
+          <br><br>
           <label>Email address</label>
-          <input type="email" name="email" required><br>
+          <input type="text" id="em" name="email" placeholder="name@domain.com" required><br>
           <label>Phone number</label>
-          <input type="text" name="phone" required><br>
-          <label>User name</label>
-          <input type="text" name="userName" required><br>
+          <input type="text" id="phone" name="phone" placeholder="Enter your Phone Number" required><br>
+          <label>User name </label>
+          <input type="text" id="user" name="userName" placeholder="Enter your Name" required><br>
           <label>Password</label>
-          <input type="password" name="pass" required><br>
+          <input type="text" id="pwrd" name="pass" placeholder="Enter your Password" required><br>
+          <label>DOB </label>
+          <input type="date" id="dofb" name="dob" required><br>
+
           <label>Gender</label>
           <input type="radio" id="m" name="gender" value="male">Male
           <input type="radio" id="f" name="gender" value="female">Female
-          <input type="radio" id="o" name="gender" value="other">Other<br><br><br>
-          <label>Date of Birth</label>
-          <input type="date" name="dob" required><br>
+          <input type="radio" id="o" name="gender" value="others">Other<br><br><br>
+
           <label>Nationality</label>
-          <select size="1" name="nation" required>
-              <option value="india">Indian</option>
-              <option value="america">America</option>
-              <option value="china">China</option>
-              <option value="austrialia">austrialia</option>
-              <option value="other">Other<br></option>
+          <select size="1" id="nat" name="nation" required>
+               <option value=""></option><br>  
+               <option value="india">Indian</option><br>
+               <option value="other">Other<br></option><br>
           </select><br>
+
           <input type="reset">
           <input type="submit">
-      </form>
-      
 
+       <br><br>
+       Already Have an account ?<a href="file:///C:/Users/advit/OneDrive/Desktop/webtech_dbms_project/webtech-project/login.html"> Log In here</a>
+     </form>
 
 </body>
 
